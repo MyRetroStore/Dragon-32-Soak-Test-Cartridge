@@ -1,0 +1,100 @@
+
+(rules PCB Dragon 32 Soak Test
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 9)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.4)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.7)
+    )
+  )
+  (rule
+    (width 350.0)
+    (clear 200.0)
+    (clear 175.0 (type smd_to_turn_gap))
+    (clear 50.0 (type smd-smd))
+  )
+  (padstack "Via[0-1]_800:400_um"
+    (shape
+      (circle F.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 800.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_800:400_um" "Via[0-1]_800:400_um" default
+  )
+  (via 
+    "Via[0-1]_800:400_um-kicad_default" "Via[0-1]_800:400_um" "kicad_default"
+  )
+  (via 
+    "Via[0-1]_800:400_um-Power" "Via[0-1]_800:400_um" Power
+  )
+  (via_rule
+    default "Via[0-1]_800:400_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_800:400_um-kicad_default"
+  )
+  (via_rule
+    Power "Via[0-1]_800:400_um-Power"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 350.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    "Net-(IC2-THR)" "unconnected-(U2-~{HALT}-Pad3)" "unconnected-(U2-~{NMI}-Pad4)" "unconnected-(U2-E-Pad6)" "Net-(U2-CART)" "unconnected-(U2-ESND-Pad35)" "Net-(D1-K)" "Net-(D2-K)"
+    /A6 /A7 "unconnected-(U2-A13-Pad37)" "unconnected-(U2-A14-Pad38)" "unconnected-(U2-A15-Pad39)" "unconnected-(U2-EXTMEM-Pad40)" /A5 /A3
+    /A1 /D0 /D1 /D2 /D3 /D4 /D5 /D6
+    /D7 /A0 /A2 /A4 "Net-(IC2-CV)" /A8 /A10 /R2
+    /P2 "Net-(IC2-DIS)" "Net-(IC2-Q)" "Net-(IC1-Pad3)" /A9 /RESET "Net-(IC1-Pad1)" "Net-(IC1-Pad2)"
+    "Net-(IC1-Pad4)" "Net-(IC1-Pad5)" "unconnected-(IC1-Pad10)" "unconnected-(IC1-Pad11)" "unconnected-(IC1-Pad12)" "unconnected-(IC1-Pad13)" "Net-(IC4-Pad12)" "unconnected-(IC4-Pad11)"
+    "unconnected-(IC4-Pad10)" "unconnected-(IC4-Pad9)" "unconnected-(IC4-Pad8)" "Net-(IC4-Pad4)" "Net-(TR1-B)" "Net-(TR2-B)" "Net-(TR1-C)" "Net-(TR2-C)"
+    "unconnected-(U2-RW-Pad18)" "unconnected-(U2-A12-Pad31)" "unconnected-(U2-A11-Pad30)" "Net-(C3-Pad2)" "unconnected-(IC3-NC-Pad26)"
+    (clearance_class "kicad_default")
+    (via_rule "kicad_default")
+    (rule
+      (width 350.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class Power
+    GND +12V VCC
+    (clearance_class Power)
+    (via_rule Power)
+    (rule
+      (width 800.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)

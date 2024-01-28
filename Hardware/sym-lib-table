@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "ROM")(type "KiCad")(uri "${KIPRJMOD}/ROM.kicad_sym")(options "")(descr ""))
+  (lib (name "Expansion")(type "KiCad")(uri "${KIPRJMOD}/Expansion.kicad_sym")(options "")(descr ""))
+)
