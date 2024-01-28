@@ -29,23 +29,22 @@ Photos - Photos of the orignal and replica PCB as well as screenshots of the car
 
 
 ## BOM
-C1	        10u Electrolytic Capacitor
-C2,C3  	    10n Ceramic Capacitor
-D1	        Red 5mm LED
-D2	        Green 5mm LED
-DC1-4	      100n Ceramic Capacitor (Decoupling)
-IC1	        74LS04
-IC2	        LM555
-IC3	        EPROM 27C64
-IC4	        74LS10
-R1-2, R5-8	3k3 Resistor 0.25W
-R3	        100k Resistor 0.25W
-R4	        1k Resistor 0.25W
-TR1,TR2    	BC237 Transistor
 
-![image](https://github.com/MyRetroStore/Dragon-32-Soak-Test-Cartridge/assets/149300137/9fa4e237-3582-4834-8f18-b982d848882c)
-
-
+| Reference  | Component                           |
+| ---------- | ----------------------------------- |
+| C1	       | 10u Electrolytic Capacitor          |
+| C2,C3      | 10n Ceramic Capacitor               |
+| D1	       | Red 5mm LED                         |
+| D2	       | Green 5mm LED                       |
+| DC1-4	     | 100n Ceramic Capacitor (Decoupling) |
+| IC1	       | 74LS04                              |
+| IC2	       | LM555                               |
+| IC3	       | EPROM 27C64                         |
+| IC4	       | 74LS10                              |
+| R1-2, R5-8 | 3k3 Resistor 0.25W                  |
+| R3         | 100k Resistor 0.25W                 |
+| R4	       | 1k Resistor 0.25W                   |
+| TR1,TR2    | BC237 Transistor                    |
 
 I've tested the PCB in my Dragon 32 and it seems to work as expected, however I do not take any responsibility if you are building this and there is damage done to your Dragon 32 due to incorrect assembly or it doesn't work as expected. 
 
