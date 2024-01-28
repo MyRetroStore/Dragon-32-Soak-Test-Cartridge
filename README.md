@@ -50,5 +50,18 @@ I've tested the PCB in my Dragon 32 and it seems to work as expected, however I 
 
 While this should be as close as possible a 100% replica to the orignal PCB there could be some error (Though hopefully not. Let me know if you find any) 
 
+## Purchasing
+
+If you don't want build this yourself the completed PCB can be purchased from:
+- [MyRetroStore](https://myretrostore.co.uk/)
+- [eBay](https://www.ebay.co.uk/str/myretrostoreuk)
+
+## License
+GNU General Public License v3.0
+
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/H2H8RDX9W)
+
+
 
 
